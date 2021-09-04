@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kaushal Works</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./main.css"/>
+  </head>
+  <body>
+    <div class="main-div">
+      <!-- <header class="header">
+        <h1 class="name">THIS IS KAUSHAL's PORTFOLIO</h1>
+        <a role="button" class="button">Download Resume</a>
+      </header> -->
+      <main class="main">
+        <section class="left">
+           <div class="left-section__content">
+             <img class="left-section__image"src="../IMG_1203.jpeg" />
+             <div class="left-section__social">
+               <h5 class="name-info"> Kaushal Kumar Gangwar</h5>
+               <div class="email-info">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span>kaushalgangwar1995@gmail.com</span>
+               </div>
+               <div class="mobile-info">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>+91-9876779846</span>
+              </div>
+               <div class="location-info">
+                 <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>Noida, IN</span>
+               </div>
+             </div>
+             <div class="button" role="button" onclick="window.open('./assests/Kaushal_kumar_gangwar_resume.pdf','_blank')">
+                Resume
+             </div>
+           </div>
+        </section>
+        <section class="right">
+          <div>
+            <article class="about-me">
+            <p>
+              I am a passionate programmer with bachelors in Computer Science & Engineering from Panjab University Chandigarh.
+            I work as a fullstack developer and believe a perfect blend of software design is one, where the goals and needs are accounted for in an elegant, efficient and robust design of the software.
+            A javascript developer keenly interested in the modern javascript landscape which spreads across technologies like ReactJS, VueJS, NodeJS and much more .
+            <br/>
+            <br/>
+            Being pragmatic makes me deal with things in a way that is based on practical rather than theoretical considerations
+            </p>
+          </article>
+          <div class="skills" id="skills">
+          </div>
+          </div>
+      </main>
+      <footer class="footer">
+        <nav>
+          <a aria-hidden="true" href="https://www.facebook.com/Imkg27" target="_blank" class="fa fa-facebook"></a>
+                <a aria-hidden="true" href="https://www.linkedin.com/in/kaushal-gangwar-2b604b7b" target="_blank" class="fa fa-linkedin"></a>
+                <a aria-hidden="true" href="https://github.com/KaushalGangwar" target="_blank" class="fa fa-github"></a>
+                <a aria-hidden="true" href="#" class="fa fa-twitter"></a>
+        </nav>
+      </footer>
+
+    </div>
+    
+  <script>
+    var el = document.getElementById('skills');
+    var skillsArray = ['Javascript', 'ReactJS', 'VueJS', 'NodeJS', 'MySQL', 'Typescript', 'Redux', 'Web Performance', 'Webpack', 'Socket.io'];
+    var docFragment = new DocumentFragment();
+    for(var i=0; i<skillsArray.length; i++) {
+      var spanEl = document.createElement('span');
+      spanEl.classList.add('button');
+      spanEl.setAttribute('onclick', 'window.open("https://google.com","_blank")');
+      spanEl.append(document.createTextNode(skillsArray[i]));
+      docFragment.append(spanEl);
+    }
+    el.append(docFragment);
+  </script>
+    </body>
+
+</html>

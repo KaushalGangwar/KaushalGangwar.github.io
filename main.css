@@ -1,0 +1,227 @@
+body{
+    margin: 0;
+    background: #2D2E2E;
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    /* overflow: hidden; */
+    /* line-height: 72px; */
+}
+
+/* .header {
+    width: 400px;
+    position: sticky;
+    top: 0;
+    height: 70px;
+    background: transparent;
+    color: #f1b200;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: none;
+    flex-grow: 1;
+} */
+
+@media(min-width: 700px) {
+    .header {
+        position: sticky;
+        top: 0;
+        /* height: 80px; */
+        transition: all 0.5s ease;
+        background: transparent;
+        color: #f1b200;
+        z-index: 100;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .button {
+        cursor: pointer;
+        color:  #f1b200;
+        border: 1px solid;
+        border-radius: 9px;
+        text-align: center;
+        width: fit-content;
+        padding: 5px;
+        margin: 15px;
+    }
+    .button:hover {
+        color: #f1b200
+    }
+    
+    
+    .main-div {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    
+    .main {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        width: 100%;
+    }
+    
+    .left {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        background-color: #2B2C2C;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 65px;
+        flex-wrap: wrap;
+        padding-right: 20px;
+    }
+    
+    
+    .left-section__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        left: 45px;
+        padding-right: 20px;
+        /* right: 10px; */
+        /* align-items: flex-start; */
+    }
+    
+    .left-section__image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        /* align-self: center; */
+    }
+    
+    .left-section__social {
+        display: flex;
+        flex-direction: column;
+        /* align-items: end; */
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+    .fa {
+        padding: 10px;
+      /* font-size: 20px; */
+      /* width: 15px; */
+      /* height: 50px; */
+      text-align: center;
+      text-decoration: none;
+      /* margin: 5px 2px; */
+      background: transparent;
+      color: #666666;
+    }
+    
+    .fa:hover{
+        color: #f1b200    
+    }
+    
+    .fa-facebook {
+      padding: 10px;
+
+        font-size: 20px;
+      width: 15px;
+      height: 50px;
+            margin: 5px 2px;
+
+        
+    }
+    
+    .fa-linkedin {
+      padding: 10px;
+    font-size: 20px;
+      width: 15px;
+      height: 50px;
+            margin: 5px 2px;
+
+    }
+    .fa-github {
+      padding: 10px;
+      font-size: 20px;
+      width: 15px;
+      height: 50px;
+     margin: 5px 2px;
+
+    }
+    .fa-twitter {
+      padding: 10px;
+        font-size: 20px;
+      width: 15px;
+      height: 50px;
+      margin: 5px 2px;
+
+    }
+   
+    
+    
+    
+    .right {
+        height: 100%;
+        position: relative;
+        top: 100px;
+        left: 50px;
+        width: 50%;
+        right: 50px;
+       
+    }
+    
+    .name-title {
+        font-size: 20px;
+        font-weight: 300;
+        color: #999;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        padding-left: 2px;
+        margin-bottom: 0px;
+        letter-spacing: 1px;
+    }
+    
+    .name-info {
+        text-transform: uppercase;
+        font-size: 15px;
+        color: #f1b200;
+        margin: 8px;
+        /* align-self: center; */
+    }
+    .mobile-info,
+    .email-info,
+    .location-info {
+        color: #666666;
+    }
+
+    .about-me {
+        line-height: 2;
+        color: #666666;
+        font-size: 20px;
+    }
+    
+    
+    
+    .scroll-top {
+        background:#252525;
+        box-shadow: 0px 1px 5px 0px rgba(0 0 0 / 50%);
+    }
+    
+    .footer {
+        position: sticky;
+        bottom: 0;
+        background-color: black;
+        color: rgb(175, 162, 162);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+    }
+
+    .skills {
+        display: flex;
+        position:relative;
+        top: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+}
