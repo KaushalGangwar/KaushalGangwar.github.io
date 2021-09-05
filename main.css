@@ -1,32 +1,29 @@
-body{
+html, body {
     margin: 0;
+    padding: 0;
+}
+
+body{
     background: #2D2E2E;
     font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     box-sizing: border-box;
     letter-spacing: 1px;
-    /* overflow: hidden; */
-    /* line-height: 72px; */
 }
 
-/* .header {
-    width: 400px;
-    position: sticky;
-    top: 0;
-    height: 70px;
-    background: transparent;
-    color: #f1b200;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    display: none;
-    flex-grow: 1;
-} */
+    .main-div {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .main {
+        display: flex;
+        flex: 1;
+    }
 
-@media(min-width: 700px) {
     .header {
         position: sticky;
         top: 0;
-        /* height: 80px; */
         transition: all 0.5s ease;
         background: transparent;
         color: #f1b200;
@@ -37,42 +34,27 @@ body{
     }
     .button {
         cursor: pointer;
-        color:  #f1b200;
+        background:  #f1b200;
+        color:black;
         border: 1px solid;
         border-radius: 9px;
         text-align: center;
-        width: fit-content;
+        width: 80px;
         padding: 5px;
         margin: 15px;
+        transition: width 2s;
+
     }
     .button:hover {
-        color: #f1b200
+        width: 150px;
     }
     
-    
-    .main-div {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-    }
-    
-    
-    .main {
-        display: flex;
-        flex-direction: row;
-        flex: 1;
-        width: 100%;
-    }
     
     .left {
         width: 30%;
-        height: 100%;
         display: flex;
         background-color: #2B2C2C;
-        justify-content: flex-start;
-        align-items: flex-start;
         padding-top: 65px;
-        flex-wrap: wrap;
         padding-right: 20px;
     }
     
@@ -82,35 +64,35 @@ body{
         flex-direction: column;
         justify-content: center;
         position: relative;
-        left: 45px;
+        padding: 0 20px 0 45px;
         padding-right: 20px;
         /* right: 10px; */
         /* align-items: flex-start; */
     }
-    
-    .left-section__image {
+
+    .left-section__image-section {
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        /* align-self: center; */
+        overflow: hidden;
+    }
+    
+    .left-section__image {
+        max-width: 200px;
+        width: 100%;
     }
     
     .left-section__social {
         display: flex;
         flex-direction: column;
-        /* align-items: end; */
         justify-content: center;
         margin-top: 30px;
     }
     
     .fa {
         padding: 10px;
-      /* font-size: 20px; */
-      /* width: 15px; */
-      /* height: 50px; */
       text-align: center;
       text-decoration: none;
-      /* margin: 5px 2px; */
       background: transparent;
       color: #666666;
     }
@@ -121,13 +103,10 @@ body{
     
     .fa-facebook {
       padding: 10px;
-
-        font-size: 20px;
+      font-size: 20px;
       width: 15px;
       height: 50px;
-            margin: 5px 2px;
-
-        
+      margin: 5px 2px;
     }
     
     .fa-linkedin {
@@ -155,17 +134,10 @@ body{
 
     }
    
-    
-    
-    
     .right {
-        height: 100%;
         position: relative;
-        top: 100px;
-        left: 50px;
         width: 50%;
-        right: 50px;
-       
+        padding: 100px 50px 50px 50px;
     }
     
     .name-title {
@@ -206,8 +178,6 @@ body{
     }
     
     .footer {
-        position: sticky;
-        bottom: 0;
         background-color: black;
         color: rgb(175, 162, 162);
         display: flex;
@@ -223,5 +193,16 @@ body{
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    .skills-item {
+        color:  #f1b200;
+        border: 1px solid;
+        border-radius: 9px;
+        text-align: center;
+        width: fit-content;
+        padding: 5px;
+        margin: 15px;
+        transition: width 2s;
+
+    }
     
-}

@@ -8,15 +8,13 @@
   </head>
   <body>
     <div class="main-div">
-      <!-- <header class="header">
-        <h1 class="name">THIS IS KAUSHAL's PORTFOLIO</h1>
-        <a role="button" class="button">Download Resume</a>
-      </header> -->
       <main class="main">
         <section class="left">
            <div class="left-section__content">
-             <img class="left-section__image"src="./assests/IMG_1203.jpeg" />
-             <div class="left-section__social">
+            <div class="left-section__image-section">
+               <img class="left-section__image"src="./assests/IMG_0933.jpeg" />
+            </div>
+            <div class="left-section__social">
                <h5 class="name-info"> Kaushal Kumar Gangwar</h5>
                <div class="email-info">
                   <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -57,7 +55,7 @@
           <a aria-hidden="true" href="https://www.facebook.com/Imkg27" target="_blank" class="fa fa-facebook"></a>
                 <a aria-hidden="true" href="https://www.linkedin.com/in/kaushal-gangwar-2b604b7b" target="_blank" class="fa fa-linkedin"></a>
                 <a aria-hidden="true" href="https://github.com/KaushalGangwar" target="_blank" class="fa fa-github"></a>
-                <a aria-hidden="true" href="#" class="fa fa-twitter"></a>
+                <a aria-hidden="true" href="https://twitter.com/KaushalKGangwar" target="_blank" class="fa fa-twitter"></a>
         </nav>
       </footer>
 
@@ -69,8 +67,7 @@
     var docFragment = new DocumentFragment();
     for(var i=0; i<skillsArray.length; i++) {
       var spanEl = document.createElement('span');
-      spanEl.classList.add('button');
-      spanEl.setAttribute('onclick', 'window.open("https://google.com","_blank")');
+      spanEl.classList.add('skills-item');
       spanEl.append(document.createTextNode(skillsArray[i]));
       docFragment.append(spanEl);
     }
