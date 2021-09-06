@@ -3,12 +3,14 @@ html, body {
     padding: 0;
 }
 
+
 body{
     background: #2D2E2E;
     font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     box-sizing: border-box;
     letter-spacing: 1px;
 }
+
 
     .main-div {
         display: flex;
@@ -21,17 +23,7 @@ body{
         flex: 1;
     }
 
-    .header {
-        position: sticky;
-        top: 0;
-        transition: all 0.5s ease;
-        background: transparent;
-        color: #f1b200;
-        z-index: 100;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+
     .button {
         cursor: pointer;
         background:  #f1b200;
@@ -72,6 +64,7 @@ body{
         /* align-items: flex-start; */
     }
 
+
     .left-section__image-section {
         width: 200px;
         height: 200px;
@@ -90,6 +83,8 @@ body{
         justify-content: center;
         margin-top: 30px;
     }
+
+    
     
     .fa {
       padding: 10px;
@@ -141,6 +136,12 @@ body{
         width: 50%;
         padding: 100px 50px 50px 50px;
     }
+    .about-me {
+        line-height: 2;
+        color: #666666;
+        font-size: 20px;
+    }
+
     
     .name-title {
         font-size: 20px;
@@ -166,11 +167,7 @@ body{
         color: #666666;
     }
 
-    .about-me {
-        line-height: 2;
-        color: #666666;
-        font-size: 20px;
-    }
+   
     
     
     
@@ -209,7 +206,46 @@ body{
         width: fit-content;
         padding: 5px;
         margin: 15px;
-        transition: width 2s;
-
     }
     
+    .copyright-content {
+        margin-top: 14px;
+        margin-left: 10px
+    }
+    @media only screen and (max-width: 600px) and (min-width: 350px) {
+        .main {
+            flex-direction: column;
+        }
+        .left {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+            padding-right: 0px;
+        }
+
+        .left-section__content {
+            padding: 0 20px 0 20px
+        }
+        .right {
+            width: 80%;
+            padding: 25px;
+        }
+        .skills {
+            justify-content: space-evenly;
+        }
+        .about-me {
+            line-height: 2;
+            color: #666666;
+            font-size: 16px;
+        }
+        .footer {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+        }
+        .button {
+            font-weight: bold;
+        }
+    }
