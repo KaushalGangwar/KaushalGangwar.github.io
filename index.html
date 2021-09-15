@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./main.css"/>
   </head>
-  <body>
-    
+  <body id="body" class="dark">
+
     <div class="main-div">
+      
       <main class="main">
         <section class="left">
            <div class="left-section__content">
@@ -30,11 +31,19 @@
                  <i class="fa fa-map-marker" aria-hidden="true"></i>
                   <span>Noida, IN</span>
                </div>
-             </div>
-             <div class="button" role="button" onclick="window.open('./assests/Kaushal_kumar_gangwar_resume.pdf','_blank')">
+               <div class="button" role="button" onclick="window.open('./assests/Kaushal_kumar_gangwar_resume.pdf','_blank')">
                 Resume
              </div>
+             <div class="dark-mode-toggle">
+              <label class="switch">
+                <input id="checkbox" type="checkbox" onclick="checkboxFN()">
+                <span class="slider round"></span>
+              </label>
+            </div> 
+             </div>
            </div>
+
+           
         </section>
         <section class="right">
           <div>
@@ -78,6 +87,15 @@
       docFragment.append(spanEl);
     }
     el.append(docFragment);
+
+    function checkboxFN(){
+      var ip = document.getElementById('checkbox');
+      if(ip.checked) {
+        document.getElementById('body').classList.replace('dark','light');
+      } else {
+        document.getElementById('body').classList.replace('light','dark')
+      }
+    }
   </script>
     </body>
 

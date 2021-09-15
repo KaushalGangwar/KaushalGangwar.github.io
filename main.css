@@ -5,10 +5,18 @@ html, body {
 
 
 body{
-    background: #2D2E2E;
     font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     box-sizing: border-box;
     letter-spacing: 1px;
+    font-display: fallback;
+}
+
+.dark {
+    background: #2D2E2E;
+}
+
+.light {
+    color: white;
 }
 
 
@@ -37,10 +45,18 @@ body{
         transition: width 2s, font-size 2s ease;
     }
 
-    .button:hover {
-        width: 150px;
-        font-weight: bold;
-        font-size: 20px;
+    .light .button {
+        background: #00AEAE
+    }
+
+    .button:hover,.button:active {
+        background: black;
+        color: #f1b200;
+    }
+
+    .light .button:hover {
+        background:#EDEADE;
+        color: #00AEAE;
     }
     
     
@@ -52,6 +68,9 @@ body{
         padding-right: 20px;
     }
     
+    .light .left {
+        background-color: #EDEADE;
+    }
     
     .left-section__content{
         display: flex;
@@ -98,8 +117,23 @@ body{
     .fa-facebook:hover,
     .fa-github:hover,
     .fa-linkedin:hover,
-    .fa-twitter:hover{
+    .fa-twitter:hover,
+    .fa-facebook:active,
+    .fa-github:active,
+    .fa-linkedin:active,
+    .fa-twitter:active{
         color: #f1b200    
+    }
+
+    .light .fa-facebook:hover,
+    .fa-github:hover,
+    .fa-linkedin:hover,
+    .fa-twitter:hover,
+    .fa-facebook:active,
+    .fa-github:active,
+    .fa-linkedin:active,
+    .fa-twitter:active{
+        color:#00AEAE  
     }
     
     .fa-linkedin {
@@ -107,7 +141,7 @@ body{
     font-size: 20px;
       width: 15px;
       height: 50px;
-            margin: 5px 2px;
+     margin: 5px 2px;
 
     }
     .fa-github {
@@ -161,15 +195,20 @@ body{
         margin: 8px;
         /* align-self: center; */
     }
+    .light .name-info {
+        color: #00AEAE
+    }
     .mobile-info,
-    .email-info,
     .location-info {
         color: #666666;
     }
 
-   
-    
-    
+    .email-info {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        color: #666666;
+    }
     
     .scroll-top {
         background:#252525;
@@ -182,6 +221,9 @@ body{
         display: flex;
         justify-content: space-between;
         height: 80px;
+    }
+    .light .footer {
+        background-color: white;
     }
 
     .footer-text {
@@ -207,11 +249,73 @@ body{
         padding: 5px;
         margin: 15px;
     }
+
+    .light .skills-item {
+        color: #00AEAE
+    }
     
     .copyright-content {
         margin-top: 14px;
         margin-left: 10px
     }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+      }
+      
+      .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #666666;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 20px;
+        left: 0;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      input:checked + .slider {
+        background-color: #00AEAE;
+      }
+      
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+      }
+      .slider.round {
+        border-radius: 34px;
+      }
+      
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+      .dark-mode-toggle {
+          margin: 15px;
+      }
     @media only screen and (max-width: 600px) and (min-width: 350px) {
         .main {
             flex-direction: column;
