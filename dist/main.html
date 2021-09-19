@@ -1,0 +1,19 @@
+<!doctype html><html><head><title>Kaushal Works</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="./main.css"><link href="main.css" rel="stylesheet"></head><body id="body" class="dark"><div class="main-div"><main class="main"><section class="left"><div class="left-section__content"><div class="left-section__image-section"><img class="left-section__image" src="./assests/IMG_0933.jpeg"></div><div class="left-section__social"><h5 class="name-info">Kaushal Kumar Gangwar</h5><div class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> <span>kaushalgangwar1995@gmail.com</span></div><div class="mobile-info"><i class="fa fa-phone" aria-hidden="true"></i> <span>+91-9876779846</span></div><div class="location-info"><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Noida, IN</span></div><div class="button" role="button" onclick="window.open('./assests/Kaushal_kumar_gangwar_resume.pdf','_blank')">Resume</div><div class="dark-mode-toggle"><label class="switch"><input id="checkbox" type="checkbox" onclick="checkboxFN()"> <span class="slider round"></span></label></div></div></div></section><section class="right"><div><article class="about-me"><p>I am a passionate programmer with bachelors in Computer Science & Engineering from Panjab University Chandigarh. I work as a fullstack developer and believe a perfect blend of software design is one, where the goals and needs are accounted for in an elegant, efficient and robust design of the software. A javascript developer keenly interested in the modern javascript landscape which spreads across technologies like ReactJS, VueJS, NodeJS and much more .<br><br>Being pragmatic makes me deal with things in a way that is based on practical rather than theoretical considerations</p></article><div class="skills" id="skills"></div></div></section></main><footer class="footer"><div class="copyright-content"><a class="fa fa-copyright"></a> <span class="footer-text">2021/ www.kaushal.dev</span></div><nav style="margin-right: 10px"><a aria-hidden="true" href="https://www.facebook.com/Imkg27" target="_blank" class="fa fa-facebook"></a> <a aria-hidden="true" href="https://www.linkedin.com/in/kaushal-gangwar-2b604b7b" target="_blank" class="fa fa-linkedin"></a> <a aria-hidden="true" href="https://github.com/KaushalGangwar" target="_blank" class="fa fa-github"></a> <a aria-hidden="true" href="https://twitter.com/KaushalKGangwar" target="_blank" class="fa fa-twitter"></a></nav></footer></div><script>var el = document.getElementById('skills');
+    var skillsArray = ['Javascript', 'ReactJS', 'VueJS', 'NodeJS', 'MySQL', 'Typescript', 'Redux', 'Web Performance', 'Webpack', 'Socket.io'];
+    var docFragment = new DocumentFragment();
+    for(var i=0; i<skillsArray.length; i++) {
+      var spanEl = document.createElement('span');
+      spanEl.classList.add('skills-item');
+      spanEl.append(document.createTextNode(skillsArray[i]));
+      docFragment.append(spanEl);
+    }
+    el.append(docFragment);
+
+    function checkboxFN(){
+      var ip = document.getElementById('checkbox');
+      if(ip.checked) {
+        document.getElementById('body').classList.replace('dark','light');
+      } else {
+        document.getElementById('body').classList.replace('light','dark')
+      }
+    }</script><script src="main.js"></script></body></html>
